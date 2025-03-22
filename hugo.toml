@@ -105,4 +105,4 @@ enableGitInfo = true
       # whether to use typeit animation for subtitle
       typeit = true
       # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
-      disclaimer = "I like writing about what I'm learning"
+      # disclaimer = "I like writing about what I'm learning"
