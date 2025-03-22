@@ -4,7 +4,7 @@ baseURL = ''
 theme = "LoveIt"
 
 # website title
-title = "My New Hugo Blog"
+title = "blog@aleguy02.dev"
 
 # language code ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "en"
