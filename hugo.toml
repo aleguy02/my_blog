@@ -43,10 +43,9 @@ enableGitInfo = true
   [params.header]
     # LoveIt NEW | 0.2.0 Header title config
     [params.header.title]
+      pre = "blog @"
       # title name
-      name = "blog"
-      # you can add extra information after the name (HTML format is supported), such as icons
-      post = "@ aleguy02.dev"
+      name = "aleguy02.dev"
 
 # Social config about the author
   [params.social]
