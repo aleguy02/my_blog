@@ -2,7 +2,7 @@ title = "blog @ alejandrovillate.com"
 baseURL = "blog.alejandrovillate.ocm"
 languageCode = "en-us"
 theme = "ananke"
-resourceDir = "../resources"
+resourceDir = "./resources"
 
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
