@@ -1,107 +1,38 @@
-baseURL = ''
+title = "blog @ alejandrovillate.com"
+baseURL = "blog.alejandrovillate.ocm"
+languageCode = "en-us"
+theme = "ananke"
+resourceDir = "../resources"
 
-# Change the default theme to be use when building the site with Hugo
-theme = "LoveIt"
+DefaultContentLanguage = "en"
+SectionPagesMenu = "main"
+googleAnalytics = ""
+enableRobotsTXT = true
 
-# website title
-title = "blog@aleguy02.dev"
+[sitemap]
+changefreq = "monthly"
+priority = 0.5
+filename = "sitemap.xml"
 
-# language code ["en", "zh-CN", "fr", "pl", ...]
-languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
-languageName = "English"
+[params]
+text_color = ""
+author = ""
+favicon = ""
+site_logo = ""
+description = "The last theme you'll ever need. Maybe."
+# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
+background_color_class = "bg-black"
+recent_posts_number = 3
 
-# Menu config
-[menu]
-  [[menu.main]]
-    weight = 1
-    identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
-    name = "posts"
-    url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
+[params.ananke.social.follow]
+new_window_icon = false
+networks = [
+  "linkedin",
+  "github"
+]
 
-# Markup related configuration in Hugo
-[markup]
-  # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
-  [markup.highlight]
-    # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
-    noClasses = false
+[params.ananke.social.linkedin]
+username = "alejandrovillate1"
 
-# whether to use git commit log
-enableGitInfo = true
-
-# Author config
-  [params.author]
-    name = "Alejandro Villate"
-
-# Header config
-  [params.header]
-    # LoveIt NEW | 0.2.0 Header title config
-    [params.header.title]
-      pre = "blog @"
-      # title name
-      name = "aleguy02.dev"
-
-# Social config about the author
-  [params.social]
-    GitHub = "aleguy02"
-    Linkedin = "alejandrovillate1"
-    Youtubechannel = "UCZbAl-d58jWJ_q5TFSJJYiA"
-
- # LoveIt CHANGED | 0.2.0 Page global config
-  [params.page]
-    [params.page.share]
-      enable = true
-      X = false
-      Threads = false
-      Facebook = false
-      Linkedin = true
-      Whatsapp = false
-      Pinterest = false
-      Tumblr = false
-      HackerNews = false
-      Reddit = false
-      VK = false
-      Buffer = false
-      Xing = false
-      Line = false
-      Instapaper = false
-      Pocket = false
-      Flipboard = false
-      Weibo = false
-      Blogger = false
-      Baidu = false
-      Odnoklassniki = false
-      Evernote = false
-      Skype = false
-      Trello = false
-      Diaspora = false # LoveIt NEW | 0.3.1
-      Mix = false
-      Telegram = false # LoveIt NEW | 0.3.1
-
-  # LoveIt NEW | 0.2.5 TypeIt config
-  [params.typeit]
-    # typing speed between each step (measured in milliseconds)
-    # My average typing speed is 80 wpm, so I did the math to find the speed here
-    speed = 150
-    # blinking speed of the cursor (measured in milliseconds)
-    cursorSpeed = 2500
-    # character used for the cursor (HTML format is supported)
-    cursorChar = "."
-    # cursor duration after typing finishing (measured in milliseconds, "-1" means unlimited)
-    duration = -1
-  
-  # Home page profile
-    [params.home.profile]
-      enable = true
-      # subtitle shown in home page (HTML format is supported)
-      subtitle = "Hello world"
-      # whether to use typeit animation for subtitle
-      typeit = true
-      # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
-      # disclaimer = "I like writing about what I'm learning"
+[params.ananke.social.github]
+username = "aleguy02"
