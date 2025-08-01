@@ -1,19 +1,39 @@
 +++
 date = '2025-07-17T19:07:16-04:00'
-draft = true
-title = 'Bug Hunt 1 - WSL Hang'
+draft = false
+title = 'Bug Hunt - WSL Hang'
 +++
 
 This is the first post in a series of candid bug hunt posts where I will describe an interesting bug I ran into, and how I eventually fixed it. As this is the first of these posts, I will explain the general structure that I will try to follow in future posts.  
+
+**Date Encountered** - the official date that the bug went from a minor annoyance to something I needed to actually fix  
 **Overview of Bug** - general description of what was happening and why it was an issue  
 **Steps I Took** - pretty self explanatory. Steps I took while trying to address the issue  
-**What I Learned** - any technical or practical takeaways from the whole process
+**What I Learned** - any technical or practical takeaways from the whole process  
+**Original Bug Hunt** - my original notes while troubleshooting the bug
+
+### Date Encountered  
+Monday, June 9, 2025, 4:55:12 PM
 
 ### Overview of Bug  
-I was running into an issue with WSL (Windows Subsystem for Linux) where I was unable to start it at random times. Specifically, I do most of my development on WSL.
-### Steps I Took
+I was running into an issue with WSL (Windows Subsystem for Linux) where I was unable to start it at random times. Specifically, I do most of my development on WSL, and I would frequently try to open it and get  
+```  
+Catastrophic failure  
+Error code: Wsl/Service/E_UNEXPECTED  
+```  
+or  
+```
+The operation timed out because a response was not received from the virtual machine or container.  
+Error code: Wsl/Service/HCS_E_CONNECTION_TIMEOUT  
+```  
 
-### What I learned
+### Steps I Took
+When I first ran into the issue, I tried restarting WSL with `wsl --shutdown`, but this was a flaky fix. This was a bandaid--acceptable for how frequently I was using WSL at the time. Once my [fellowship](https://blog.alejandrovillate.com/posts/mlh-fellowship-journey/) started ramping up (and I would have to use WSL more frequently) I started searching for a cure. Skimming some GitHub issues led me to believe that Docker Desktop was the root issue though I wasn't sure exactly why. I lazily removed and reinstalled DD on my computer, hoping this would be the fix I was looking for. After this failed, I tried messing around with some virtualization settings through the Windows interface, but this was fruitless too. 
+
+After a little more careful reading of [this GitHub issue](https://github.com/docker/for-win/issues/14827) and testing on my end, I confirmed Docker Desktop's Resource Saver Mode was the root issue. Restarting DD or disabling Resource Saver Mode resolved the issue.
+
+### What I learned  
+I learned that Docker Desktop runs on the WSL2 engine, meaning it runs on the same virtual machine that powers all the different Linux distributions I have installed. Resource Saver Mode pauses this machine, thus freezing all the other distributions running via WSL.  It was also cool to see GitHub Issues in action while hunting for a fix—I’d mostly seen them used for feature requests, and hadn’t realized they were also active spaces for discussions and troubleshooting, which makes sense in hindsight.
 
 ## Original Bug Hunt
 \#\# Message:  
