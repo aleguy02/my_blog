@@ -20,3 +20,4 @@ jobs:
           to: ${{ secrets.RECIPIENT_ME }}
           from: "aleguy02"
           body: "Hey, I just published a new blog post! Check it out at ${{ secrets.URL }} :). This is an automated message."
+          cc: ${{ secrets.RECIPIENT_H }},${{ secrets.RECIPIENT_D }},${{ secrets.RECIPIENT_M }},${{ secrets.RECIPIENT_A }}

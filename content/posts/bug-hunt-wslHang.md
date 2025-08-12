@@ -6,6 +6,8 @@ title = 'Bug Hunt - WSL Hang'
 
 This is the first post in a series of candid bug hunt posts where I will describe an interesting bug I ran into, and how I eventually fixed it. As this is the first of these posts, I will explain the general structure that I will try to follow in future posts.  
 
+<!--more-->
+
 **Date Encountered** - the official date that the bug went from a minor annoyance to something I needed to actually fix  
 **Overview of Bug** - general description of what was happening and why it was an issue  
 **Steps I Took** - pretty self explanatory. Steps I took while trying to address the issue  

@@ -4,9 +4,9 @@ draft = false
 title = 'My take on Linux and Windows'
 +++
 
-Originally drafted 3/14
-
 When I participated in MLH's Cloud Week, I found myself interacting with the Windows and Linux command lines more than ever before. When I say Windows, I mean a combination of Windows PowerShell and Command Prompt, and when I say Linux, I mean Ubuntu via WSL. I noticed many differences in the learning curve that I wanted to talk about. This isn't my answer to "Why do some people prefer Linux over Windows?". It is my answer to "Why do I prefer Linux over Windows?" Anyway, here are my thoughts.
+
+<!--more-->
 
 ### Learning Resources
 

@@ -6,6 +6,8 @@ title = 'My Journey to Become an MLH Fellow'
 
 My journey with MLH started long before I joined the fellowship. It began last summer when I joined the organizing team for SwampHacks, one of my university's MLH-sponsored hackathon, and continued in the Fall semester as I participated in a few Global Hack Weeks. I strongly believe that the biggest factor that led to my acceptance in the fellowship was not my coding ability but my demonstrated passion for MLH as an organization.
 
+<!--more-->
+
 ## What is the MLH Fellowship?
 
 The MLH Fellowship is a 12-week internship alternative focused on learning applicable real world skills with the guidance of industry veterans (_I want to emphasize the focus on education, I don't think there is anything quite like the fellowship in terms of how much you can learn and grow as a developer in this program_). There are 3 tracks offered: Software Engineering (or Open Source), Production Engineering (me, me, me!), and Web3 Engineering. Each track follows its own curriculum and has different industry partners. I strongly recommend focusing your application on one of these tracks--I'll explain a little bit more later. The application form consists of some background questions (i.e. which programming languages are you proficient in, have you contributed to open source, etc.), some specific questions (i.e. why do you want to be an MLH fellow), and a code sample submission. Anyways, now that we have some context, I'll get into how I got in.
