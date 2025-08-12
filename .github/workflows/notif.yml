@@ -1,0 +1,22 @@
+name: Send Email Notification
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send email via Gmail SMTP
+        uses: dawidd6/action-send-mail@v6
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Check out my new blog post!"
+          to: ${{ secrets.RECIPIENT_ME }}
+          from: "aleguy02"
+          body: "Hey, I just published a new blog post! Check it out at ${{ secrets.URL }} :). This is an automated message."
